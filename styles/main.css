@@ -11,3 +11,68 @@ html,body{
     margin:0 auto ;
     overflow: hidden;
 }
+
+.cube-wrap {
+    -webkit-perspective: 700px;
+    -webkit-perspective-origin: 50% 100px;
+    -webkit-transform: translateY(55px);
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 100px 100px 0;
+}
+
+.cube>div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.4);
+    box-shadow: inset 0 0 20px rgba(100,100,100,0.3);
+    font-size: 10px;
+    color: rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cube .sheet-item{
+    width: 12.5%;
+    height: 12.5%;
+    line-height: 24px;
+    box-shadow: inset 0 0 15px rgba(100,125,100,0.3);
+    float: left;
+}
+
+.back-pane {
+    -webkit-transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right-pane {
+    -webkit-transform:rotateY(-270deg) translateX(100px);
+    -webkit-transform-origin: 100% 0;
+}
+
+.left-pane {
+    -webkit-transform:rotateY(270deg) translateX(-100px);
+    -webkit-transform-origin: 0 50%;
+}
+
+.top-pane {
+    -webkit-transform:rotateX(-90deg) translateY(-100px);
+    -webkit-transform-origin: 50% 0;
+}
+
+.bottom-pane {
+    -webkit-transform:rotateX(90deg) translateY(100px);
+    -webkit-transform-origin: 50% 100%;
+}
+
+.front-pane {
+    -webkit-transform: translateZ(100px);
+    background: rgba(150, 100, 100, 0.5) !important;
+}
