@@ -1,0 +1,13 @@
+html,body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+}
+
+#scene{
+    width: 320px;
+    height: 320px;
+    background: rgba(86,175,0, 0.6);
+    margin:0 auto ;
+    overflow: hidden;
+}
