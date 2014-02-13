@@ -46,6 +46,7 @@
         prevent_default: true
     })
         .on('touch', function(eTouch){
+            cube.classList.add("action");
             startDrawing();
 
             initialPosition = clone(cubePosition),
@@ -73,6 +74,7 @@
         .on('release', function(eRelease){
 
             stopDrawing();
+            cube.className = cube.className.replace(/(^|\s+)action(\s+|$)/g,'$1');
             pinchLock = false;
 
         });
